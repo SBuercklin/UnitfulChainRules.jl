@@ -1,0 +1,8 @@
+name = "UnitfulChainrules"
+uuid = "f31437dd-25a7-4345-875f-756556e6935d"
+authors = ["Sam Buercklin <sam.buercklin@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+ChainRulesCore = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
