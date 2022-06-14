@@ -1,5 +1,5 @@
 using Unitful
-using UnitfulChainrules
+using UnitfulChainRules
 
 using ChainRulesCore: rrule, ProjectTo, NoTangent
 

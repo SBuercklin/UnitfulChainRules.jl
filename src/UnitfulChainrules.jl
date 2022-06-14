@@ -1,4 +1,4 @@
-module UnitfulChainrules
+module UnitfulChainRules
 
 using Unitful
 using Unitful: Quantity, Units

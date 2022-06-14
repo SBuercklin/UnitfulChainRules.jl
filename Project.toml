@@ -1,4 +1,4 @@
-name = "UnitfulChainrules"
+name = "UnitfulChainRules"
 uuid = "f31437dd-25a7-4345-875f-756556e6935d"
 authors = ["Sam Buercklin <sam.buercklin@gmail.com>"]
 version = "0.1.0"
