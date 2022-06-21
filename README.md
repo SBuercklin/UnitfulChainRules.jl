@@ -23,3 +23,8 @@ Zygote.gradient((x,y) -> (x*ms + 9*y*ms)/μm, 2.0*W, 3.0*W)
 ## Array Rules
 
 This package does not yet include compatibility for operations between arrays of `Unitful.Quantity`s, like most `LinearAlgebra` ops. [An issue](https://github.com/SBuercklin/UnitfulChainRules.jl/issues/5) is open for discussing how to best add array rules.
+
+## Related Packages
+
+* [Unitful.jl](https://github.com/PainterQubits/Unitful.jl) - Implements dimensional numerical quantities for Julia
+* [ChainRules.jl](https://github.com/JuliaDiff/ChainRules.jl) - Provides a standard set of rules for interfacing with various autodiff backends in Julia
