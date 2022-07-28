@@ -1,7 +1,7 @@
 module UnitfulChainRules
 
 using Unitful
-using Unitful: Quantity, Units, NoDims
+using Unitful: Quantity, Units, NoDims, FreeUnits
 using ChainRulesCore: NoTangent, @scalar_rule
 import ChainRulesCore: rrule, frule, ProjectTo
 
