@@ -3,6 +3,8 @@ using UnitfulChainRules
 
 using ChainRulesCore: frule, rrule, ProjectTo, NoTangent
 
+using Zygote
+
 using Random
 rng = VERSION >= v"1.7" ? Random.Xoshiro(0x0451) : Random.MersenneTwister(0x0451)
 
@@ -50,18 +52,18 @@ end
         UT = typeof(1.0*u"W")
         x = randn(rng)
         δx = randn(rng)
-        Ω, pb = rrule(UT, x)
+        Ω, pb = Zygote.pullback(UT, x)
         @test Ω == x * u"W"
-        @test pb(δx) == (NoTangent(), δx * u"W")
+        @test only(pb(δx)) == δx * u"W"
     end
     @testset "* rrule" begin
         x = randn(rng)*u"W" 
         y = u"m"
         z = u"L"
-        Ω, pb = rrule(*, x, y, z)
+        Ω, pb = Zygote.pullback(*, x, y, z)
         @test Ω == x*y*z
         δ = randn(rng)
-        @test pb(δ) == (NoTangent(), δ*y*z, NoTangent(), NoTangent())
+        @test pb(δ) == (δ*y*z, nothing, nothing)
     end
 end
 
