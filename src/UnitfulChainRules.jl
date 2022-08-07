@@ -2,7 +2,7 @@ module UnitfulChainRules
 
 using Unitful
 using Unitful: Quantity, Units, NoDims, FreeUnits
-using ChainRulesCore: NoTangent, @scalar_rule
+using ChainRulesCore: NoTangent, @scalar_rule, @thunk
 import ChainRulesCore: rrule, frule, ProjectTo
 
 const REALCOMPLEX = Union{Real, Complex}
