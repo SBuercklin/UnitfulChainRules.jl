@@ -13,3 +13,7 @@ end
 @safetestset "Extras" begin
     include("./extras.jl")
 end
+
+@safetestset "Math" begin
+    include("./math.jl")
+end
