@@ -17,3 +17,7 @@ end
 @safetestset "Math" begin
     include("./math.jl")
 end
+
+@safetestset "Array Math" begin
+    include("./arraymath.jl")
+end
